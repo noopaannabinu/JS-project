@@ -1,0 +1,113 @@
+/* styles.css */
+
+body {
+    font-family: 'Amazon Ember', Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #000000;
+    color: #ffffff; /* Text color for the entire page */
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 10px;
+}
+
+#search-input {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    width: 300px;
+}
+
+#search-button,
+#reset-button {
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff9900;
+    color: white;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.2s ease;
+}
+
+#search-button:hover,
+#reset-button:hover {
+    background-color: #ff8c00;
+}
+
+#products-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four columns per row */
+    gap: 20px;
+    justify-items: center;
+}
+
+.product {
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px; /* Padding for content inside the card */
+    text-align: center;
+    transition: transform 0.2s ease;
+    width: 210px; /* Set fixed width for each product card */
+    
+    display: flex; /* Use flexbox for better alignment */
+    flex-direction: column; /* Stack elements vertically */
+}
+
+.product:hover {
+    transform: translateY(-5px);
+}
+
+.product img {
+    width: auto; /* Allow the image to adjust width */
+    height: 100%; /* Make the image fill the height of its container */
+    max-width: 100%; /* Ensure the image doesn't exceed container width */
+    object-fit: contain; /* Ensure images maintain aspect ratio and fit within the container */
+    border-radius: 5px; /* Rounded corners for images */
+}
+
+.product h2 {
+    font-size: 1em; /* Adjusted font size for product title */
+    margin-bottom: 8px;
+    color: #333333;
+}
+
+.product p {
+    font-size: 0.9em; /* Adjusted font size for product description */
+    margin-bottom: 10px;
+    color: #555555;
+}
+
+.product p strong {
+    color: #000000;
+}
+
+.product button {
+    margin-top: auto; /* Push the button to the bottom */
+    background-color: #ff9900;
+    color: #ffffff;
+    border: none;
+    border-radius: 3px;
+    padding: 8px 16px; /* Padding for button */
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.product button:hover {
+    background-color: #ff8c00;
+}
